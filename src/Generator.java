@@ -30,6 +30,7 @@ public class Generator {
                 pixelSize = 9;
                 break;
         }
+
         Color[][] picture = new Color[gui.getHeight() / pixelSize][gui.getWidth() / pixelSize];
 
         for (int i = 0; i < complex.length / pixelSize; i++) {
@@ -39,13 +40,13 @@ public class Generator {
                     picture[i][j] = Color.WHITE;
                 } else {
                     if (c.getRe() > 0 && c.getIm() > 0) {
-                        picture[i][j] = Color.GRAY;
+                        picture[i][j] = Color.RED;
                     } else if (c.getRe() < 0 && c.getIm() > 0) {
-                        picture[i][j] = Color.DARK_GRAY;
+                        picture[i][j] = Color.BLUE;
                     } else if (c.getRe() < 0 && c.getIm() < 0) {
-                        picture[i][j] = Color.BLACK;
+                        picture[i][j] = Color.GRAY;
                     } else if (c.getRe() > 0 && c.getIm() < 0) {
-                        picture[i][j] = Color.LIGHT_GRAY;
+                        picture[i][j] = Color.CYAN;
                     }
                 }
             }
@@ -59,7 +60,8 @@ public class Generator {
      * Skapar en matris där varje element är ett komplext tal som
      * har rätt koordinater (se beskrivning nedan)
      */
-    private Complex[][] mesh(double minRe, double maxRe, double minIm, double maxIm,
+    private Complex[][] mesh(double minRe, double maxRe,
+                             double minIm, double maxIm,
                              int width, int height) {
         Complex[][] mesh = new Complex[height][width];
         for (int i = 0; i < height; i++) {
