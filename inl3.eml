@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component jdk="J2SE-1.5">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="cs_edaa10.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/cs_edaa10/cs_edaa10.jar!/"/>
+	</lib>
+	<lib name="cs_util_window.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/cs_edaa10/cs_util_window.jar!/"/>
+	</lib>
+</component>
